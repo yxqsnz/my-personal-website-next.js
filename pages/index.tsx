@@ -15,11 +15,9 @@ const Home: NextPage<Props> = ({ blog: { posts } }: Props) => (
           {posts.map(({ id, date, title }) => (
             <li key={id}>
               <Link href="/read/[id]" as={`/read/${id}`}>
-                <div>
-                  <label style={{ cursor: "pointer" }} className="text-sky-400">
-                    {title}
-                  </label>
-                </div>
+                <label style={{ cursor: "pointer" }} className="text-sky-400">
+                  {title}
+                </label>
               </Link>
             </li>
           ))}

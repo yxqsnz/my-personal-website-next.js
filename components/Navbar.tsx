@@ -29,6 +29,7 @@ const NavbarItem = ({ title, url }: { title: string; url: string }) => (
 const Avatar = () => (
   <Link href="https://github.com/yxqsnz">
     <Image
+      style={{ cursor: "pointer" }}
       alt="Avatar image"
       src="https://github.com/yxqsnz.png"
       className="rounded-full h-12 w-12"
