@@ -19,6 +19,7 @@ export default function Navbar() {
     </nav>
   );
 }
+
 const NavbarItem = ({ title, url }: { title: string; url: string }) => (
   <Link href={url} className="no-underline hover:underline">
     {title}
@@ -26,13 +27,15 @@ const NavbarItem = ({ title, url }: { title: string; url: string }) => (
 );
 
 const Avatar = () => (
-  <Image
-    alt="Avatar image"
-    src="https://github.com/yxqsnz.png"
-    className="rounded-full h-12 w-12"
-    width={38}
-    height={38}
-    loading="lazy"
-    decoding="async"
-  />
+  <Link href="https://github.com/yxqsnz">
+    <Image
+      alt="Avatar image"
+      src="https://github.com/yxqsnz.png"
+      className="rounded-full h-12 w-12"
+      width={38}
+      height={38}
+      loading="lazy"
+      decoding="async"
+    />
+  </Link>
 );
