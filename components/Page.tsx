@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
-import Navbar from "./Navbar";
 const variants = {
   hidden: { opacity: 0, scale: 0 },
   enter: { opacity: 1, scale: 1 },
@@ -15,7 +14,6 @@ const Page = ({ children }: { children: React.ReactNode }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Navbar />
     <motion.main
       variants={variants} // Pass the variant object into Framer Motion
       initial="hidden" // Set the initial state to variants.hidden

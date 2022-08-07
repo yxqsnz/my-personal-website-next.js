@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import Page from "../components/Page";
+import Redirect from "../components/Redirect";
 import { getSortedPostsData, IPost } from "../lib/blog";
 import Css from "../styles/Home.module.css";
 type Props = { blog: { posts: IPost[] } };
@@ -9,16 +9,14 @@ const Home: NextPage<Props> = ({ blog: { posts } }: Props) => (
   <Page>
     <div className={Css.Home}>
       <h1 className="font-bold">Welcome to my website.</h1>
-      <div className={`text-lg ${Css.BlogPosts}`}>
-        <h2>See: </h2>
+      <h2> I'm Moizes J. Sousa (aka yxqsnz) </h2>
+      <h3> I program mainly in Rust, Typescript, Python and C. </h3>
+
+      <div className={`text-lg ${Css.BlogPosts} `}>
         <ul>
-          {posts.map(({ id, date, title }) => (
+          {posts.map(({ id, title }) => (
             <li key={id}>
-              <Link href="/read/[id]" as={`/read/${id}`}>
-                <label style={{ cursor: "pointer" }} className="text-sky-400">
-                  {title}
-                </label>
-              </Link>
+              <Redirect to="/read/[id]" as={`/read/${id}`} text={title} />
             </li>
           ))}
         </ul>
