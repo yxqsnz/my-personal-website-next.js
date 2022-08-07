@@ -9,7 +9,7 @@ const Home: NextPage<Props> = ({ blog: { posts } }: Props) => (
   <Page>
     <div className={Css.Home}>
       <h1 className="font-bold">Welcome to my website.</h1>
-      <h2> I'm Moizes J. Sousa (aka yxqsnz) </h2>
+      <h2> I&apos;m Moizes J. Sousa (aka yxqsnz) </h2>
       <h3> I program mainly in Rust, Typescript, Python and C. </h3>
 
       <div className={`text-lg ${Css.BlogPosts} `}>
