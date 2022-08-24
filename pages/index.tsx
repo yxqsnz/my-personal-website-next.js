@@ -1,37 +1,26 @@
 import type { NextPage } from "next";
 import Page from "../components/Page";
 import Redirect from "../components/Redirect";
-import { getSortedPostsData, IPost } from "../lib/blog";
 import Css from "../styles/Home.module.css";
-type Props = { blog: { posts: IPost[] } };
+import { readArticles } from "../lib/article";
 
-const Home: NextPage<Props> = ({ blog: { posts } }: Props) => (
+const Home: NextPage<any> = (props: any) => (
   <Page>
     <div className={Css.Home}>
       <h1 className="font-bold">Welcome to my website.</h1>
       <h2> I&apos;m Moizes J. Sousa (aka yxqsnz) </h2>
       <h3> I program mainly in Rust, Typescript, Python and C. </h3>
 
-      <div className={`text-lg ${Css.BlogPosts} `}>
-        <ul>
-          {posts.map(({ id, title }) => (
-            <li key={id}>
-              <Redirect to="/read/[id]" as={`/read/${id}`} text={title} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <div className={`text-lg ${Css.BlogPosts} `}></div>
     </div>
   </Page>
 );
-export async function getStaticProps() {
-  const posts = getSortedPostsData();
+
+export const getStaticProps = () => {
   return {
     props: {
-      blog: {
-        posts,
-      },
+      articles: readArticles()
     },
   };
-}
+};
 export default Home;

@@ -1,0 +1,24 @@
+[17:13:39.240] Global cache location '/home/yxqsnz/.cache/typescript/4.7', safe file path '/projects/Web/my-personal-website/node_modules/.pnpm/typescript@4.7.4/node_modules/typescript/lib/typingSafeList.json', types map path /projects/Web/my-personal-website/node_modules/.pnpm/typescript@4.7.4/node_modules/typescript/lib/typesMap.json
+[17:13:39.242] Processing cache location '/home/yxqsnz/.cache/typescript/4.7'
+[17:13:39.242] Trying to find '/home/yxqsnz/.cache/typescript/4.7/package.json'...
+[17:13:39.248] Loaded content of '/home/yxqsnz/.cache/typescript/4.7/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.606"},"devDependencies":{"@types/eslint":"^8.4.6","@types/mdast":"^3.0.10","@types/nprogress":"^0.2.0","@types/react":"^18.0.17","@types/react-dom":"^18.0.6"}}
+[17:13:39.250] Loaded content of '/home/yxqsnz/.cache/typescript/4.7/package-lock.json'
+[17:13:39.274] Adding entry into typings cache: 'eslint' => '/home/yxqsnz/.cache/typescript/4.7/node_modules/@types/eslint/index.d.ts'
+[17:13:39.278] Adding entry into typings cache: 'mdast' => '/home/yxqsnz/.cache/typescript/4.7/node_modules/@types/mdast/index.d.ts'
+[17:13:39.281] Adding entry into typings cache: 'nprogress' => '/home/yxqsnz/.cache/typescript/4.7/node_modules/@types/nprogress/index.d.ts'
+[17:13:39.312] Adding entry into typings cache: 'react' => '/home/yxqsnz/.cache/typescript/4.7/node_modules/@types/react/index.d.ts'
+[17:13:39.324] Adding entry into typings cache: 'react-dom' => '/home/yxqsnz/.cache/typescript/4.7/node_modules/@types/react-dom/index.d.ts'
+[17:13:39.326] Finished processing cache location '/home/yxqsnz/.cache/typescript/4.7'
+[17:13:39.326] Process id: 157828
+[17:13:39.326] NPM location: /home/yxqsnz/.asdf/installs/nodejs/16.17.0/bin/npm (explicit '--npmLocation' not  provided)
+[17:13:39.326] validateDefaultNpmLocation: false
+[17:13:39.327] Npm config file: /home/yxqsnz/.cache/typescript/4.7/package.json
+[17:13:39.327] Updating types-registry npm package...
+[17:13:39.327] Exec: /home/yxqsnz/.asdf/installs/nodejs/16.17.0/bin/npm install --ignore-scripts types-registry@latest
+[17:13:40.714]     Succeeded. stdout:
+    
+    up to date, audited 13 packages in 778ms
+
+found 0 vulnerabilities
+
+[17:13:40.714] Updated types-registry npm package
