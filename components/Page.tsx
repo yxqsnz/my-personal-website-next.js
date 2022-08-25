@@ -9,7 +9,7 @@ const variants = {
 const Page = ({ title, children }: { title?: string, children: React.ReactNode }) => (
   <div className="mtransition-colors duration-300">
     <Head>
-      <title>{title || "Yxqsnz&apos;s website"}</title>
+      <title>{title || "Yxqsnz's website"}</title>
       <meta name="description" content="Just testing :>" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
