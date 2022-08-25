@@ -6,10 +6,10 @@ const variants = {
   exit: { opacity: 0, scale: 0 },
 };
 
-const Page = ({ children }: { children: React.ReactNode }) => (
+const Page = ({ title, children }: { title?: string, children: React.ReactNode }) => (
   <div className="mtransition-colors duration-300">
     <Head>
-      <title>Yxqsnz&apos;s website</title>
+      <title>{title || "Yxqsnz's website"}</title>
       <meta name="description" content="Just testing :>" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
