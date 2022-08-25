@@ -14,6 +14,7 @@ export interface IArticle {
 }
 
 const parseAllArticles = async () => {
+  internalStorage.clear()
   const cats = await readDir(articleDirectory);
   Trace.debug(`(lib/article:readArticles): Found ${cats}`);
 
@@ -80,3 +81,4 @@ export async function getByCatSug(remoteCat: string, slug: string) {
     }
   }
 }
+

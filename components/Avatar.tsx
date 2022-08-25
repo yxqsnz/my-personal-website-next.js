@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from 'react'
 import { Router } from "next/router";
-import Css from '../styles/Avatar.module.css'
 import Bag from "../lib/bag";
 
 export default function Avatar() {
@@ -13,7 +12,7 @@ export default function Avatar() {
     Router.events.on('routeChangeStart', () => {
       if (!animation.current.valid()) {
         animation.current.replace(setTimeout(() => {
-          setClassNames(Css.animation)
+          setClassNames('animate-pulse')
         }, 100));
       }
     });
