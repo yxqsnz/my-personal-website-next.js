@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { getByCatSug, IArticle, readArticles } from "../../lib/article";
 import remarkGfm from "remark-gfm";
 import Code from "../../components/Code";
+import Page from "../../components/Page";
 import Head from 'next/head'
 
 export async function getStaticPaths() {
@@ -37,11 +38,7 @@ export default function Slug({
   const router = useRouter();
   const slug = (router.query.slug as string[]) || [];
   return (
-    <div>
-      <Head>
-        <title> {title} </title>
-      </Head>
-
+    <Page title={title}>
       <article className="space-y-5 pt-5">
         <div className="flex flex-col items-center justify-center space-y-1">
           <h1 className="text-xl font-bold border-b-2 border-secondary">
@@ -90,6 +87,6 @@ export default function Slug({
           </ReactMarkdown>
         </div>
       </article>
-    </div>
+    </Page>
   );
 }
