@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+//import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 import { getByCatSug, IArticle, readArticles } from "../../lib/article";
 import remarkGfm from "remark-gfm";
@@ -36,11 +36,11 @@ export default function Slug({
 }: {
   article: IArticle;
 }) {
-  const router = useRouter();
-  const slug = (router.query.slug as string[]) || [];
+//  const router = useRouter();
+// const slug = (router.query.slug as string[]) || [];
 
   return (
-    <Page title={title}>
+    <Page title={title} description={description}>
       <article className="space-y-5 pt-5">
         <div className="flex flex-col items-center justify-center space-y-1">
           <h1 className="text-xl font-bold border-b-2 border-secondary">
