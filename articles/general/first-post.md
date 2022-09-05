@@ -6,9 +6,9 @@ description: My first post yay!
 
 # What is this?
 
-A Simple article engine using [Markdown](https://markdown.org).
+A Simple article engine using [Markdown](https://www.markdownguide.org).
 
-You can see this file in [articles/general/first-post.md](https://google.com)
+You can see this file in [articles/general/first-post.md](https://github.com/yxqsnz/my-personal-website/blob/main/articles/general/first-post.md)
 
 ## Some source
 
@@ -36,3 +36,9 @@ fn main() {
  ui.label(format!("Hello '{}', age {}", name, age));
 }
 ```
+
+### Cats!
+
+![cat](https://cataas.com/c)
+
+![cute cat](https://cataas.com/c/cute)
