@@ -13,7 +13,7 @@ function Home({ articles }: Props) {
         <h2> I&apos; m Moizes J.Sousa (aka yxqsnz) </h2>
         <h3> I program mainly in Rust, Typescript, Python and C.</h3>
 
-        <div className={`text-lg ${Css.BlogPosts} `}>
+        <div className={`text-lg ${Css.BlogPosts}`}>
           {
             articles.map(([cat, arts]) => arts.map(({ title, slug }) => <Redirect key={slug} text={title} to={`/a/${cat}/${slug}`} />))
           }
