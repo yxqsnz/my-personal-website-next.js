@@ -4,12 +4,13 @@ import { getByCatSug, IArticle, readArticles } from "../../lib/article";
 import remarkGfm from "remark-gfm";
 import Code from "../../components/Code";
 import Page from "../../components/Page";
-import Head from 'next/head'
+
 
 export async function getStaticPaths() {
   const articles = await readArticles();
-  const paths = articles.map(([cat, arts]) => arts.map((art) => ({ params: { slug: [cat, art.slug] } }))
-  ).at(0);
+  
+  const paths = articles.map(([cat, arts]) => arts.map((art) => ({ params: { slug: [cat, art.slug] } }))).flat();
+
   return {
     paths,
     fallback: false,
@@ -37,6 +38,7 @@ export default function Slug({
 }) {
   const router = useRouter();
   const slug = (router.query.slug as string[]) || [];
+
   return (
     <Page title={title}>
       <article className="space-y-5 pt-5">
@@ -53,15 +55,15 @@ export default function Slug({
             remarkPlugins={[remarkGfm]}
             components={{
               h1({ children }) {
-                return <p className="font-bold text-xl text-white-200 dark:text-gray-200"> {children} </p>
+                return <p className="font-bold text-xl text-white-200 dark:text-gray-200 p-1"> {children} </p>
               },
 
               h2({ children }) {
-                return <p className="font-bold text-x text-gray-400 pl-1"> {children}</p>
+                return <p className="font-bold text-x text-gray-400 pl-1 p-1"> {children}</p>
               },
 
               h3({ children }) {
-                return <p className="font-bold text-xx text-gray-500 pl-3"> {children}</p>
+                return <p className="font-bold text-xx text-gray-500 p-2"> {children}</p>
               },
 
               p({ children }) {
