@@ -24,7 +24,7 @@ export default function Navbar() {
 const NavbarItem = ({ icon, name, url }: { icon: React.ReactNode; name: string; url: string }) => (
   <Link href={url}>
     <a>
-      <div className="flex justify-center text-center items-center  hover:text-pink-400 rounded-md border dark:bg-neutral-900/2 dark:border-neutral-50/[0.06] px-4 py-2 transition ease-in-out delay-75 hover:bg-base-200 duration-300">
+      <div className="flex justify-center text-center items-center hover:text-pink-400 rounded-md border dark:bg-neutral-900/2 dark:border-neutral-50/[0.06] px-4 py-2 transition ease-in-out delay-75 hover:bg-base-200 duration-300">
         <p> {icon} </p>
         <p className="pl-2"> {name} </p>
       </div>
