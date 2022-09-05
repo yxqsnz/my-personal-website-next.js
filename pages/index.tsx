@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import Page from "../components/Page";
 import Redirect from "../components/Redirect";
 import Css from "../styles/Home.module.css";
